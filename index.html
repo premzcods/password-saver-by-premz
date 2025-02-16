@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Vault - Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🔒 Secure Vault</h1>
+            <p>Your Personal Password Manager</p>
+        </div>
+
+        <form class="add-password-form" id="passwordForm">
+            <div class="input-group">
+                <input type="text" id="website" placeholder="Website" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="username" placeholder="Username" required>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+            <button type="submit">💾 Save Password</button>
+        </form>
+
+        <div class="password-list" id="passwordList"></div>
+    </div>
+
+    <div class="modal" id="deleteModal">
+        <div class="modal-content">
+            <h3>Are you sure?</h3>
+            <div class="modal-actions">
+                <button class="danger" onclick="confirmDelete()">Delete</button>
+                <button class="secondary" onclick="closeModal()">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
